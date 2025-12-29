@@ -8,25 +8,28 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState('home');
-  const [menuOpen, setMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('home');
+    const [menuOpen, setMenuOpen] = useState(false);
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50">
-      <Header 
-        activeSection={activeSection} 
-        setActiveSection={setActiveSection}
-        menuOpen={menuOpen}
-        setMenuOpen={setMenuOpen}
-      />
+    return ( <
+        div className = "min-h-screen bg-white" >
+        <
+        Header activeSection = { activeSection }
+        setActiveSection = { setActiveSection }
+        menuOpen = { menuOpen }
+        setMenuOpen = { setMenuOpen }
+        />
 
-      {activeSection === 'home' && <Home setActiveSection={setActiveSection} />}
-      {activeSection === 'servicos' && <Services setActiveSection={setActiveSection} />}
-      {activeSection === 'portfolio' && <Portfolio />}
-      {activeSection === 'agendamento' && <Booking />}
-      {activeSection === 'contato' && <Contact />}
+        {
+            activeSection === 'home' && < Home setActiveSection = { setActiveSection }
+            />} {
+            activeSection === 'servicos' && < Services setActiveSection = { setActiveSection }
+            />} { activeSection === 'portfolio' && < Portfolio / >
+        } { activeSection === 'agendamento' && < Booking / > } { activeSection === 'contato' && < Contact / > }
 
-      <Footer />
-    </div>
-  );
+        <
+        Footer / >
+        <
+        /div>
+    );
 }
